@@ -6,4 +6,6 @@ object DependenciesVer {
 
     const val grpc = "1.33.1"
     const val grpcKt = "0.2.1"
+
+    const val kotlinxCoroutineCore = "1.3.9"
 }

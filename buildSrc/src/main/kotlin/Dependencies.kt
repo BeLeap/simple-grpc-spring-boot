@@ -8,4 +8,6 @@ object Dependencies {
 
     const val springBootWeb = "org.springframework.boot:spring-boot-starter-web"
     const val springBootDevTools = "org.springframework.boot:spring-boot-devtools"
+
+    const val kotlinxCoroutineCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core"
 }
