@@ -1,0 +1,5 @@
+deps:
+  - BeLeap/interface-simple-grpc-spring-boot@main
+root:
+  lock:
+    BeLeap/interface-simple-grpc-spring-boot@main: 12d6ddcdc3e3fe968ec4750642f6d897d1807822

@@ -16,6 +16,14 @@ plugins {
     Plugins.kotlin
 }
 
+allprojects {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        google()
+    }
+}
+
 group = "co.riiid"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
@@ -35,17 +43,19 @@ dependencies {
 subprojects {
     apply(plugin = Plugins.idea)
     apply(plugin = Plugins.kotlin)
-
-    repositories {
-        mavenCentral()
-        mavenLocal()
-        google()
-    }
+    apply(plugin = Plugins.springDependencyManagement)
 }
 
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict")
         jvmTarget = "11"
+    }
+}
+
+the<io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension>().apply {
+    imports {
+        mavenBom(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES)
+        mavenBom("org.springframework.cloud:spring-cloud-dependencies:Hoxton.SR1")
     }
 }
