@@ -4,6 +4,8 @@ object Dependencies {
     const val protobufGradlePlugin = "com.google.protobuf:protobuf-gradle-plugin"
     const val javaxAnnotation = "javax.annotation:javax.annotation-api"
 
+    const val grpcSpringBootStarter = "io.github.lognet:grpc-spring-boot-starter"
+
     fun grpc(module: String) = "io.grpc:grpc-$module"
 
     const val springBootWeb = "org.springframework.boot:spring-boot-starter-web"

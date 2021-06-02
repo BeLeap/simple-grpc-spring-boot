@@ -16,6 +16,7 @@ fun DependencyHandlerScope.useGrpc() {
     "implementation"(buildDependencyString(Dependencies.grpc("stub"), DependenciesVer.grpc))
     "implementation"(buildDependencyString(Dependencies.grpc("netty"), DependenciesVer.grpc))
     "implementation"(buildDependencyString(Dependencies.grpc("kotlin-stub"), DependenciesVer.grpcKt))
+    "implementation"(buildDependencyString(Dependencies.grpcSpringBootStarter, DependenciesVer.grpcSpringBootStarter))
 }
 
 fun DependencyHandlerScope.useSpringBoot() {

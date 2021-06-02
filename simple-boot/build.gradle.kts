@@ -2,6 +2,7 @@ import com.google.protobuf.gradle.*
 
 plugins {
     id(Plugins.protobufPlugin) version PluginsVer.protobufPlugin
+    id(Plugins.kotlinSpring)
 }
 
 the<io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension>().apply {

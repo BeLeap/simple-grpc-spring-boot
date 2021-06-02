@@ -4,6 +4,8 @@ object DependenciesVer {
     const val protobufGradlePlugin = "1.3.2"
     const val javaxAnnotation = "1.3.2"
 
+    const val grpcSpringBootStarter = "4.5.2"
+
     const val grpc = "1.33.1"
     const val grpcKt = "0.2.1"
 
