@@ -36,8 +36,6 @@ dependencies {
     implementation("${Dependencies.javaxAnnotation}:${DependenciesVer.javaxAnnotation}")
 
     implementation("${Dependencies.kotlinxCoroutineCore}:${DependenciesVer.kotlinxCoroutineCore}")
-
-    implementation("com.google.protobuf:protobuf-gradle-plugin:0.8.13")
 }
 
 subprojects {
@@ -50,12 +48,5 @@ tasks.withType<KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict")
         jvmTarget = "11"
-    }
-}
-
-the<io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension>().apply {
-    imports {
-        mavenBom(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES)
-        mavenBom("org.springframework.cloud:spring-cloud-dependencies:Hoxton.SR1")
     }
 }

@@ -4,6 +4,13 @@ plugins {
     id(Plugins.protobufPlugin) version PluginsVer.protobufPlugin
 }
 
+the<io.spring.gradle.dependencymanagement.dsl.DependencyManagementExtension>().apply {
+    imports {
+        mavenBom(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES)
+        mavenBom("org.springframework.cloud:spring-cloud-dependencies:Hoxton.SR1")
+    }
+}
+
 tasks {
     val pollapoInstall by register<Exec>("pollapoInstall") {
         if (File("$rootDir/.pollapo").exists()) {
@@ -28,6 +35,7 @@ dependencies {
 
     useSpringBoot()
 
+    implementation("com.google.protobuf:protobuf-gradle-plugin:0.8.13")
     protobuf(files("$rootDir/.pollapo"))
 }
 

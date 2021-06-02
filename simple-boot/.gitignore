@@ -35,3 +35,7 @@ out/
 
 ### VS Code ###
 .vscode/
+
+#####################
+### Proto CodeGen ###
+src/main/kotlin/co.riiid.simpleboot/generated
