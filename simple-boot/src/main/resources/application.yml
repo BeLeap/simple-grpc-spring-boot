@@ -1,0 +1,5 @@
+co:
+  riiid:
+    inside:
+      grpc-logging:
+        enable: true

@@ -36,6 +36,9 @@ dependencies {
 
     useSpringBoot()
 
+    implementation("co.riiid:inside-grpc:0.4.2.RELEASE")
+    implementation("co.riiid:inside-boot:0.4.2.RELEASE")
+
     implementation("com.google.protobuf:protobuf-gradle-plugin:0.8.13")
     protobuf(files("$rootDir/.pollapo"))
 }
